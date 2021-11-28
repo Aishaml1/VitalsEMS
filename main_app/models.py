@@ -1,6 +1,6 @@
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
-
+from datetime import date
 # Create your models here.
 GENDERS = (
     ('Z', 'Prefer Not to Say'),
@@ -18,4 +18,4 @@ class Patient(models.Model):
 		default=GENDERS[0][0]
     )
     phone = PhoneNumberField()
-    
+

@@ -22,12 +22,16 @@
             alt=""
           >
         </div>
-        <h2 class="card-title">{{ patient.last }},{{ patient.first }}</h2>
+        <h2 class="card-title"></h2>
+        <div>
+        <a href="{% url 'patients_detail' patient.id %}">
+       <h1> {{ patient.last }},{{ patient.first }} </h1>
+        </div>
+          <div>
           <p>Date of Birth: {{ patient.date }} </p>
           <p>Gender: {{ patient.gender }}</p>
-          <p> Phone: {{ patient.phone }} </p>
-      </div>
-    </div>
+          </div>
+          
   {% endfor %}
 </section>
 
