@@ -28,7 +28,8 @@
     </div>
     <nav>
       <ul>
-      <li><a href="/patients">All Patients</a></li>
+      <li><a href="{% url 'patients_index' %}">All Patients</a></li>
+      <li><a href="{% url 'patients_create' %}">New Patient</a></li>
         <li><a href="/about">About</a></li>
       </ul>
     </nav>
