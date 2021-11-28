@@ -5,7 +5,7 @@
 <link 
   rel="stylesheet" 
   type="text/css" 
-  href="{% static 'css/cat-detail.css' %}"
+  href="{% static 'css/' %}"
 />
 {% endblock %}
 
@@ -24,6 +24,10 @@
           <p>Gender: {{ patient.gender }}</p>
          <p> Phone: {{ patient.phone }} </p>
   </div>
+  <div class="patient-actions">
+      <a href="{% url 'patients_update' patient.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'patients_delete' patient.id %}" class="btn danger">Delete</a>
+    </div>
 </section>
 
 {% endblock %}

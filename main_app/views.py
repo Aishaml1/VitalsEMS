@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Patient
+
 
 # Create your views here.
 
@@ -23,3 +24,12 @@ class PatientCreate(CreateView):
   model = Patient
   fields = '__all__'
   success_url ='/patients/'
+  
+class PatientUpdate(UpdateView):
+  model = Patient
+  fields = ['date','gender','phone']
+  success_url = '/patients/'
+  
+class PatientDelete(DeleteView):
+  model = Patient
+  success_url = '/patients/'

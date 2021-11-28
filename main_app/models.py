@@ -1,9 +1,10 @@
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 from datetime import date
+from django.urls import reverse
 # Create your models here.
 GENDERS = (
-    ('Z', 'Prefer Not to Say'),
+    (' ', 'Prefer Not to Say'),
     ('M', 'Male'),
     ('F', 'Female'),
     ('X', 'X'),
@@ -19,3 +20,8 @@ class Patient(models.Model):
     )
     phone = PhoneNumberField()
 
+def __str__(self):
+    return self.name
+    
+def get_absolute_url(self):
+    return reverse('patients_detail', kwargs={'patient_id': self.id})
