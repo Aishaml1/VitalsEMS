@@ -21,7 +21,7 @@ def about(request):
 
 @login_required
 def patients_index(request):
-    patients = Patient.filter(user=request.user)
+    patients = request.user.patient_set.all()
     return render(request, 'patients/index.html', { 'patients': patients })
 
 def patients_detail(request, patient_id):
@@ -65,7 +65,7 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('cats_index')
+            return redirect('patients_index')
         else:
             error_message = 'Invalid sign up - try again'
             form = UserCreationForm()
