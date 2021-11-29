@@ -3,30 +3,30 @@
 
 {% block head %}
 <link 
-  rel="stylesheet" 
-  type="text/css" 
-  href="{% static 'css/' %}"
+rel="stylesheet" 
+type="text/css" 
+href="{% static 'css/' %}"
 />
 {% endblock %}
 
 {% block content %}
 
 <section class="patient-container">
-  <div class="patient-img">
+<div class="patient-img">
     <img 
-      src="{% static 'images/' %}" 
-      alt=""
+    src="{% static 'images/' %}" 
+    alt=""
     >
-  </div>
-  <div class="patient-details">
+</div>
+<div class="patient-details">
     <h2> {{ patient.last }},{{ patient.first }}</h2>
-          <p>Date of Birth: {{ patient.date }} </p>
-          <p>Gender: {{ patient.gender }}</p>
-         <p> Phone: {{ patient.phone }} </p>
-  </div>
-  <div class="patient-actions">
-      <a href="{% url 'patients_update' patient.id %}" class="btn warn">Edit</a>
-      <a href="{% url 'patients_delete' patient.id %}" class="btn danger">Delete</a>
+        <p>Date of Birth: {{ patient.date }} </p>
+        <p>Gender: {{ patient.gender }}</p>
+        <p> Phone: {{ patient.phone }} </p>
+</div>
+<div class="patient-actions">
+    <a href="{% url 'patients_update' patient.id %}" class="btn warn">Edit</a>
+    <a href="{% url 'patients_delete' patient.id %}" class="btn danger">Delete</a>
     </div>
 </section>
 
