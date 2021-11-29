@@ -5,6 +5,7 @@ from .forms import VitalsForm
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 
 
 
@@ -17,8 +18,9 @@ class Home(LoginView):
 def about(request):
     return render(request, 'about.html')
 
+@login_required
 def patients_index(request):
-    patients = Patient.objects.all()
+    patients = Patient.filter(user=request.user)
     return render(request, 'patients/index.html', { 'patients': patients })
 
 def patients_detail(request, patient_id):
