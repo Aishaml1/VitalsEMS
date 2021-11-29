@@ -1,10 +1,21 @@
-from django import forms, ModelForm
-from models import Vitals
+from django.forms import ModelForm
+from .models import Vitals
 
 class VitalsForm(ModelForm):
     class Meta:
         model = Vitals
-        fields = ['__all__']
+        fields = ['respiration','pulse','systolic', 'diastolic', 'consciousness', 'gcs', 'skin', 'status']
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Class Vitals(forms.ModelForm):

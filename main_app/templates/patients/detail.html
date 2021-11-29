@@ -29,20 +29,47 @@ href="{% static 'css/' %}"
     <a href="{% url 'patients_delete' patient.id %}" class="btn danger">Delete</a>
     </div>
 </section>
-</div>
+<br />
+
+<h3>Add a Vitals</h3>
+    <form
+      method="post" 
+      class="subsection-content"
+    >
+      {% csrf_token %}
+      {{ vitals_form.as_p }}
+      <button type="submit" class="btn submit">Add</button>
+    </form>
+    <h3>Vital Sets</h3>
+
+<section>
     <table>
       <thead>
-        <tr><th>Date</th><th>Pulse</th></tr>
+    <tr><th>Date</th><th>Respiration</th><th>Pulse</th><th>Blood Pressure</th><th>Level Of Conciousness</th><th>GCS</th><th>Pupils</th><th>Skin</th><th>Status</th>
       </thead>
       <tbody>
         {% for vitals in patient.vitals_set.all %}
           <tr>
             <td>{{vitals.vitals_date}}</td>
+            <td>{{vitals.respiration}}</td>
             <td>{{vitals.pulse}}</td>
+            <td>{{vitals.systolic}}/{{vitals.diastolic}}</td>
+            <td>{{vitals.consciousness}}</td>
+            <td>{{vitals.gcs}}</td>
+            <td>{{vitals.pupils}}</td>
+            <td>{{vitals.skin}}</td>
+            <td>{{vitals.status}}</td>
           </tr>
         {% endfor %}
       </tbody>
     </table>
+
+
+{% comment %} 
+<div>
+</tr> <th>Notes</th>
+<td>{{vitals.notes}} </td></tr> {% endcomment %}
+
   </section>
-</div>
+
 {% endblock %}

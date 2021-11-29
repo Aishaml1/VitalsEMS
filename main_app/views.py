@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Patient
+from .forms import VitalsForm
 
 
 # Create your views here.
@@ -18,7 +19,10 @@ def patients_index(request):
 
 def patients_detail(request, patient_id):
   patient = Patient.objects.get(id=patient_id)
-  return render(request, 'patients/detail.html', { 'patient': patient })
+  vitals_form = VitalsForm()
+  return render(request, 'patients/detail.html', {
+    'patient': patient, 'vitals_form': vitals_form
+    })
 
 class PatientCreate(CreateView):
   model = Patient
