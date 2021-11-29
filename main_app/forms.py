@@ -1,0 +1,27 @@
+# from django import forms
+# from models import Vitals
+
+# Class Vitals(forms.ModelForm):
+
+
+
+
+
+# consciousness = forms.ChoiceField(
+#         'Level Of Consciousness',
+#         widget=forms.RadioSelect, choices=LOC
+#         )
+# pupils = forms.ChoiceField(
+#         'Pupils',
+#         widget=forms.RadioSelect, choices=PUPILS
+#         )
+# skin = forms.ChoiceField(
+#         'Skin',
+#         max_length=1,
+#         choices=SKIN,
+#         default=SKIN[0][0]
+#     )
+# status = forms.ChoiceField(
+#         'Status',
+#         widget=forms.RadioSelect, choices=STATUS
+#         )
