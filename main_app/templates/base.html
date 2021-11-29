@@ -28,9 +28,15 @@
     </div>
     <nav>
       <ul>
+       {% if user.is_authenticated %}
       <li><a href="{% url 'patients_index' %}">All Patients</a></li>
       <li><a href="{% url 'patients_create' %}">New Patient</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'logout' %}">Log out</a></li>
+        {% else %}
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'home' %}">Login</a></li>
+          {% endif %}
       </ul>
     </nav>
   </header>
