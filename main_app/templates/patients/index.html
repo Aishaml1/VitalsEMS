@@ -17,15 +17,14 @@
     <div class="card">
       <div class="card-content">
         <div class="card-img-container">
-          <img 
-            src="{% static 'images/' %}" 
-            alt=""
-          >
+          <img src="https://img.icons8.com/external-tal-revivo-solid-tal-revivo/24/000000/external-patient-with-heart-condition-isolated-on-a-white-background-hospital-solid-tal-revivo.png"/>
         </div>
+        <a href="{% url 'patients_detail' patient.id %}">
+        <h1> {{ patient.last }},{{ patient.first }} </h1>
         <h2 class="card-title"></h2>
         <div>
-        <a href="{% url 'patients_detail' patient.id %}">
-       <h1> {{ patient.last }},{{ patient.first }} </h1>
+        
+       
         </div>
           <div>
           <p>Date of Birth: {{ patient.date }} </p>
