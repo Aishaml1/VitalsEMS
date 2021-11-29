@@ -1,13 +1,18 @@
-from django.forms import ModelForm
+from django.forms import ModelForm, forms, ChoiceField, RadioSelect
 from .models import Vitals
 
 class VitalsForm(ModelForm):
     class Meta:
         model = Vitals
-        fields = ['vitals_date', 'respiration','pulse','systolic', 'diastolic', 'consciousness', 'gcs', 'pupils','skin', 'status']
-
-
-
+        fields = ['vitals_date', 
+                'respiration',
+                'pulse','systolic', 
+                'diastolic', 
+                'consciousness',
+                'gcs', 
+                'pupils',
+                'skin', 
+                'status']
 
 
 
