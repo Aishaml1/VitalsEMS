@@ -3,8 +3,7 @@ from models import Vitals
 
 Class Vitals(forms.ModelForm):
 
-
-
+choice = Vitals(label=("Selected your choice"), choices=Vitals.SKIN)
 
 
 # consciousness = forms.ChoiceField(
