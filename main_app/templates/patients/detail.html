@@ -33,6 +33,7 @@ href="{% static 'css/' %}"
 
 <h3>Add a Vitals</h3>
     <form
+    action="{% url 'add_vitals' patient.id %}" 
       method="post" 
       class="subsection-content"
     >

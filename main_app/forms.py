@@ -4,7 +4,7 @@ from .models import Vitals
 class VitalsForm(ModelForm):
     class Meta:
         model = Vitals
-        fields = ['respiration','pulse','systolic', 'diastolic', 'consciousness', 'gcs', 'skin', 'status']
+        fields = ['vitals_date', 'respiration','pulse','systolic', 'diastolic', 'consciousness', 'gcs', 'pupils','skin', 'status']
 
 
 
