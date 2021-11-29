@@ -29,5 +29,20 @@ href="{% static 'css/' %}"
     <a href="{% url 'patients_delete' patient.id %}" class="btn danger">Delete</a>
     </div>
 </section>
-
+</div>
+    <table>
+      <thead>
+        <tr><th>Date</th><th>Pulse</th></tr>
+      </thead>
+      <tbody>
+        {% for vitals in patient.vitals_set.all %}
+          <tr>
+            <td>{{vitals.vitals_date}}</td>
+            <td>{{vitals.pulse}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+</div>
 {% endblock %}

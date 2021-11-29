@@ -1,5 +1,11 @@
-from django import forms
+from django import forms, ModelForm
 from models import Vitals
+
+class VitalsForm(ModelForm):
+    class Meta:
+        model = Vitals
+        fields = ['__all__']
+
 
 # Class Vitals(forms.ModelForm):
 

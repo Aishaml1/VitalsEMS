@@ -102,3 +102,9 @@ class Vitals(models.Model):
     )
     notes = models.TextField(max_length=250)
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+
+def __str__(self):
+    return f"{self.vitals()} on {self.vitals_date }"
+
+def vitals_for_today(self):
+    return self.vitals_set.filter(vitals_date=date.today()).count()
