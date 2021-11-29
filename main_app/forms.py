@@ -1,7 +1,7 @@
-# from django import forms
-# from models import Vitals
+from django import forms
+from models import Vitals
 
-# Class Vitals(forms.ModelForm):
+Class Vitals(forms.ModelForm):
 
 
 
