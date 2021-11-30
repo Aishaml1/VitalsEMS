@@ -7,14 +7,13 @@
 
 {% block content %}
 
-<section class="logo-container">
-  <div class="patient-container">
-    <img src="{% static 'images/' %}" alt="" />
-  </div>
-  
+<section class="home-container">
+<div class="home-container">
+<img style='height:45vh; margin-left:23rem;'src="{% static 'images/home.svg' %}" alt="save lives" />
+</div>
 </section>
 
-</section>
+
 {% if not user.is_authenticated %}
 <section>
   <form action="{% url 'home' %}" method="post" class="login">

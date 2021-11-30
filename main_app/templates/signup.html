@@ -8,8 +8,8 @@
 {% block content %}
 
 <div class="page-header">
-  <h1>Sign Up</h1>
-  <img src="{% static 'images/nerd-cat.svg' %}" alt="A cat using a computer"/>
+<h1>Sign Up</h1>
+<img src="{% static 'images/' %}" alt=" "/>
 </div>
 {% if error_message %}
   <p class="red-text">{{ error_message }}</p>
@@ -21,5 +21,4 @@
   </table>
   <button type="submit" class="btn submit">Submit!</button>
 </form>
-
 {% endblock %}

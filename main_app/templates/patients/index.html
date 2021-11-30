@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block head %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/cat-index.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>
 {% endblock %}
 
 {% block content %}
@@ -15,22 +15,16 @@
 <section class="card-container">
   {% for patient in patients %}
     <div class="card">
+    <a href="{% url 'patients_detail' patient.id %}">
+     <h2 class="card-title">{{ patient.last }}, {{ patient.first }}</h2>
+      <div class="card-img-container">
+     <img src="{% static 'images/patient.svg' %}"/>
       <div class="card-content">
-        <div class="card-img-container">
-          <img src="https://img.icons8.com/external-tal-revivo-solid-tal-revivo/24/000000/external-patient-with-heart-condition-isolated-on-a-white-background-hospital-solid-tal-revivo.png"/>
+      <p>Date of Birth: {{ patient.date }}</p>
+      <p>Gender: {{ patient.gender }}</p>
+       </div>
+       </div>
         </div>
-        <a href="{% url 'patients_detail' patient.id %}">
-        <h1> {{ patient.last }},{{ patient.first }} </h1>
-        <h2 class="card-title"></h2>
-        <div>
-        
-       
-        </div>
-          <div>
-          <p>Date of Birth: {{ patient.date }} </p>
-          <p>Gender: {{ patient.gender }}</p>
-          </div>
-          
   {% endfor %}
 </section>
 
