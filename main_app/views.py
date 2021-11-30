@@ -31,6 +31,17 @@ def patients_detail(request, patient_id):
         'patient': patient, 'vitals_form': vitals_form
     })
 
+def add_vitals(request, patient_id):
+    form = VitalsForm(request.POST)
+    print('patient', patient_id)
+    if form.is_valid():
+        print('VALID')
+        new_vitals = form.save(commit=False)
+        new_vitals.patient_id = patient_id
+        new_vitals.save()
+    return redirect('patients_detail', patient_id=patient_id)
+
+
 
 class PatientCreate(LoginRequiredMixin, CreateView):
     model = Patient
@@ -51,15 +62,6 @@ class PatientUpdate(UpdateView):
 class PatientDelete(DeleteView):
     model = Patient
     success_url = '/patients/'
-
-
-def add_vitals(request, patient_id):
-    form = VitalsForm(request.POST)
-    if form.is_valid():
-        new_vitals = form.save(commit=False)
-        new_vitals.patient_id = patient_id
-        new_vitals.save()
-        return redirect('patients_detail', patient_id=patient_id)
 
 
 def signup(request):

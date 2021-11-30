@@ -2,7 +2,6 @@ from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 from datetime import date
 from django.urls import reverse
-from django.core.validators import MaxValueValidator, MinValueValidator 
 from django.contrib.auth.models import User
 # Create your models here.
 STATUS = [
@@ -60,12 +59,12 @@ class Patient(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
-def __str__(self):
-    return self.name
+    def __str__(self):
+            return self.first
 
 
-def get_absolute_url(self):
-    return reverse('patients_detail', kwargs={'patient_id': self.id})
+    def get_absolute_url(self):
+        return reverse('patients_detail', kwargs={'patient_id': self.id})
 
 
 class Vitals(models.Model):
@@ -79,23 +78,22 @@ class Vitals(models.Model):
         max_length=20,
         choices=LOC,
     )
-    gcs = models.IntegerField('Glasgow Coma Scale',
-                            default=15, 
-                            validators=[MinValueValidator(1),
-                            MaxValueValidator(15)] 
-                            )
+    gcs = models.IntegerField(
+        'Glasgow Coma Scale', 
+        default=15
+    )
     pupils = models.CharField( 
         'pupils',
         max_length=20,
         choices=PUPILS,
     )
-    skin=  models.CharField( 
+    skin =  models.CharField( 
         'Skin',
         max_length=20,
         choices=SKIN,
         default=SKIN[0][0]
     )
-    status=  models.CharField( 
+    status =  models.CharField( 
         'Status',
         max_length=20,
         choices=STATUS,
@@ -103,8 +101,8 @@ class Vitals(models.Model):
     notes = models.TextField(max_length=250)
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
 
-def __str__(self):
-    return f"{self.vitals()} on {self.vitals_date }"
+    def __str__(self):
+        return f"{self.status} on {self.vitals_date}"
 
-def vitals_for_today(self):
-    return self.vitals_set.filter(vitals_date=date.today()).count()
+    def vitals_for_today(self):
+        return self.vitals_set.filter(vitals_date=date.today()).count()

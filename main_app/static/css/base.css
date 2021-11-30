@@ -18,7 +18,7 @@ html {
   }
   
   body {
-    background-color: rgb(189, 208, 224);
+    background-color: rgba(139, 141, 141, 0.349);
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -27,8 +27,6 @@ html {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     min-height: 100vh;
-    --nav-bg: rgba(243, 64, 64, 0.7);
-    --nav-bg-ff: rgba(104, 197, 248, .9);
     --borders: rgb(3, 3, 3) solid 2px;
     --text-color: rgb(17, 20, 17);
     --link-hover-color: rgb(78, 61, 61);
@@ -53,16 +51,6 @@ header {
     border-bottom: var(--borders);
 }
 
-nav {
- font-family: 'Michroma', sans-serif;
-    margin: 10px;
-}
-
-ul {
-    margin: 0;
-    list-style: none;
-    padding: 0;
-  }
   
   main {
     width: 100%;
@@ -73,41 +61,7 @@ ul {
     font-size: var(--font-xl);
   }
   
-  nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 600;
-    font-size: 16px;
-  }
-  
-  nav a:hover {
-    color: var(--link-hover-color)
-  }
-  
-  nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  nav li {
-    padding: 5px 8px;
-  }
 
-  .header-logo-container a {
-    position: absolute;
-    left: 0;
-    top:-25px;
-    display: flex;
-    flex-direction:row;
-    font-size:12px;
-    font-family: 'Michroma', sans-serif;
-  }
-  .header-logo-container img{
-    height:55px;
-    margin-left: 10px;
-  }
   
   .page-header {
     display: flex;
@@ -166,96 +120,97 @@ ul {
   .page-header img:first-of-type {
     margin-left: 20px;
   }
-  
-  @media only screen and (min-width: 768px) {
-    header {
-      position: sticky;
-      display: flex;
-      flex-direction: row;
-      top: 0;
-      align-items: center;
-    }
-  
-    main {
-      max-width: 1300px;
-      min-height: calc(100vh - 53px);
-    }
-  
-    nav{
-     
-      margin: 10px 0;
-      padding: 0 15px;
-    }
-  
-    nav {
-      margin-left: auto;
-      display: flex;
-      justify-content: center;
-    }
-  
-    nav ul {
-      flex-wrap: nowrap;
-    }
-  
 
-  
-    .page-header h1 {
-      font-size: var(--font-xtreme);
-    }
-    
-    .page-header img {
-      height: 50px;
-      margin-left:20px;
-    }
-    
-    .page-header img:first-of-type {
-      margin-left: 25px;
-    }
-  
-    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-      header {
-        background: var(--nav-bg);
-        -webkit-backdrop-filter: blur(3px);
-        backdrop-filter: blur(3px);
-      }
-    }
+
+
+header {
+    background: rgba(255, 255, 255, 0.089);
+    box-shadow: 0 4px 6px rgba(0,0,0,.2);  
   }
-  
-  @media only screen and (min-width: 1024px) {
-    main {
-      min-height: calc(100vh - 55px);
-    }
-    
-    header {
-      margin: 20px 20px 0 20px;
-      width: calc(100vw - 40px);
-      max-width: 1920px;
-      top: 20px;
-      background-color: transparent;
-      border-bottom: none;
-    }
-  
-    nav {
-      margin: 0;
-      background: var(--nav-bg-ff);
-      border: var(--borders);
-      border-radius: 18px;
-    }
-  
-    nav {
-      margin-left: auto;
-    }
-  
-    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-      header {
-        -webkit-backdrop-filter: none;
-        backdrop-filter: none;
-      }
-  
-      nav {
-        background: rgba(212, 212, 212, 0);
-        -webkit-backdrop-filter: blur(3px);
-        backdrop-filter: blur(3px);
-      }
-    }
+
+ .header-logo-container a {
+    position: absolute;
+    left: 0;
+    top:15px;
+    display: flex;
+    flex-direction:row;
+    font-size:15px;
+    font-family: 'Michroma', sans-serif;
   }
+  .header-logo-container img{
+    height:55px;
+    margin-left: 10px;
+  }
+
+.header-logo-container {
+    float: left;
+    margin-right: 20px;
+  }
+
+  nav {
+   margin-right: 15rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+  }
+  nav li {
+    display: inline-block;
+    margin-left:15px;
+    height: 70px;
+    line-height: 70px;
+    transition: .5s linear;
+  }
+  nav a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    color: #868686;
+    text-transform: uppercase;
+  }
+  nav a:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left:0;
+    bottom: 15px;
+    background: #868686;
+    transition: width .5s linear;  
+  }
+  nav a:hover:after {width: 100%;}
+  
+  @media screen and (max-width: 660px) {
+    header {text-align: center;}
+    .header-logo-container  {
+      float: none;
+      display: inline-block;
+      margin: 50px 0 20px 0;
+    }
+    ul {float: none;
+    font-size: 10px;}
+    nav li:first-of-type {margin-left: 0;}
+  }
+
+
+  @media screen and (max-width: 550px) {
+  nav {overflow: visible;}
+  nav li {
+    display: block;
+    margin: 0;
+    height: 40px;
+    line-height: 40px;
+  }
+  nav li:hover {background: rgba(0,0,0,.1);}
+  nav a:after {content: none;}
+  }
+
+
+
+
+
+
+

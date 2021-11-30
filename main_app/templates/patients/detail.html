@@ -32,24 +32,37 @@ href="{% static 'css/' %}"
 <br />
 
 <h1>Add a Vitals</h1>
-    <form
+ <form
     action= "{% url 'add_vitals' patient.id %}" 
-    method="post" 
-    class="subsection-content" >
+    method="POST" 
+    class="subsection-content" 
+    >
       {% csrf_token %}
       {{ vitals_form.as_p }}
+
       <button type="submit" class="btn submit">Add</button>
-    </form>
+      </form>
+
 
 <h3>Vital Sets</h3>
 <section>
-    <table>
-      <thead>
-    <tr><th>Date</th><th>Respiration</th><th>Pulse</th><th>Blood Pressure</th><th>Level Of Conciousness</th><th>GCS</th><th>Pupils</th><th>Skin</th><th>Status</th>
-      </thead>
-      <tbody>
-        {% for vitals in patient.vitals_set.all %}
-          <tr>
+    <table class="table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Respiration</th>
+            <th>Pulse</th>
+            <th>Blood Pressure</th>
+            <th>Consciousness</th>
+            <th>GCS</th>
+            <th>Pupils </th>
+            <th>Skin</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+     {% for vitals in patient.vitals_set.all %}
+        <tr>
             <td>{{vitals.vitals_date}}</td>
             <td>{{vitals.respiration}}</td>
             <td>{{vitals.pulse}}</td>
@@ -59,11 +72,10 @@ href="{% static 'css/' %}"
             <td>{{vitals.pupils}}</td>
             <td>{{vitals.skin}}</td>
             <td>{{vitals.status}}</td>
-          </tr>
-        
-      </tbody>
-    </table>
-{% endfor %}
-  </section>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</section>
 
 {% endblock %}
