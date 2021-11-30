@@ -6,7 +6,8 @@ class VitalsForm(ModelForm):
         model = Vitals
         fields = ['vitals_date', 
                 'respiration',
-                'pulse','systolic', 
+                'pulse',
+                'systolic', 
                 'diastolic', 
                 'consciousness',
                 'gcs', 

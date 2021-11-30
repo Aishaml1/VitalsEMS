@@ -33,16 +33,15 @@ href="{% static 'css/' %}"
 
 <h1>Add a Vitals</h1>
     <form
-    action="{% url 'add_vitals' patient.id %}" 
-      method="post" 
-      class="subsection-content"
-    >
+    action= "{% url 'add_vitals' patient.id %}" 
+    method="post" 
+    class="subsection-content" >
       {% csrf_token %}
       {{ vitals_form.as_p }}
       <button type="submit" class="btn submit">Add</button>
     </form>
-    <h3>Vital Sets</h3>
 
+<h3>Vital Sets</h3>
 <section>
     <table>
       <thead>
@@ -61,16 +60,10 @@ href="{% static 'css/' %}"
             <td>{{vitals.skin}}</td>
             <td>{{vitals.status}}</td>
           </tr>
-        {% endfor %}
+        
       </tbody>
     </table>
-
-
-{% comment %} 
-<div>
-</tr> <th>Notes</th>
-<td>{{vitals.notes}} </td></tr> {% endcomment %}
-
+{% endfor %}
   </section>
 
 {% endblock %}
