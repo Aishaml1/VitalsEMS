@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
 html {
     box-sizing: border-box
   }
@@ -53,6 +54,7 @@ header {
 }
 
 nav {
+ font-family: 'Michroma', sans-serif;
     margin: 10px;
 }
 
@@ -66,7 +68,8 @@ ul {
     width: 100%;
   }
   
-  h2 {
+  h1 {
+    font-family: 'Michroma', sans-serif;
     font-size: var(--font-xl);
   }
   
@@ -93,13 +96,16 @@ ul {
   }
 
   .header-logo-container a {
+    position: absolute;
+    left: 0;
+    top:-25px;
     display: flex;
     flex-direction:row;
-    font-size: larger;
+    font-size:12px;
     font-family: 'Michroma', sans-serif;
   }
   .header-logo-container img{
-    height:50px;
+    height:55px;
     margin-left: 10px;
   }
   
