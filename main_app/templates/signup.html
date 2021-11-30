@@ -9,7 +9,7 @@
 
 <div class="page-header">
 <h1>Sign Up</h1>
-<img src="{% static 'images/' %}" alt=" "/>
+<img src="{% static 'images/home.svg' %}" alt="save lives "/>
 </div>
 {% if error_message %}
   <p class="red-text">{{ error_message }}</p>
@@ -19,6 +19,6 @@
   <table>
     {{ form.as_table }}
   </table>
-  <button type="submit" class="btn submit">Submit!</button>
+  <button type="submit" class="btn" id='signup'>Submit!</button>
 </form>
 {% endblock %}

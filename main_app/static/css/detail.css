@@ -1,0 +1,46 @@
+section h3 {
+    position: relative;
+    left: 59rem;
+    bottom:6rem;
+}
+section .table{
+    position: relative;
+    left: 30rem;
+    bottom:6rem;
+}
+table {
+    width: 50%;
+  }
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.add-vitals {
+    position: relative;
+    left:30rem;
+}
+
+.patient-container{
+    position: relative;
+    left:10rem;
+
+}
+.patient-actions{
+    display: flex;
+    flex-direction:row;
+    gap: 10px;
+}
+
+
+
+#delete:before {
+    content: 'Delete';
+}
+#edit:before {
+    content: 'Edit';
+}
+
+#add:before {
+    content: 'Add';
+}

@@ -8,16 +8,16 @@
   <img src="{% static 'images/' %}" alt=""/>
 </div>
 <h2>Are you sure you want to delete {{ object. }}?</h2>
-
 <form action="" method="POST" class="form">
   {% csrf_token %}
   <a 
     href="{% url 'patients_detail' patient.id %}" 
-    class="btn secondary"
+    class="btn" 
+    id='cancel'
   >
     Cancel
   </a>
-  <button type="submit" class="btn danger">Yes - Delete!</button>
+  <button type="submit" class="btn" id='delete'>Yes - Delete!</button>
 </form>
 
 {% endblock %}

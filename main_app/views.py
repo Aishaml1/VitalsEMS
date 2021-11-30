@@ -33,14 +33,11 @@ def patients_detail(request, patient_id):
 
 def add_vitals(request, patient_id):
     form = VitalsForm(request.POST)
-    print('patient', patient_id)
     if form.is_valid():
-        print('VALID')
         new_vitals = form.save(commit=False)
         new_vitals.patient_id = patient_id
         new_vitals.save()
     return redirect('patients_detail', patient_id=patient_id)
-
 
 
 class PatientCreate(LoginRequiredMixin, CreateView):
