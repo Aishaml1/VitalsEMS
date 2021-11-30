@@ -1,13 +1,25 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 
 <h1>Vitals EMS</h1>
 <hr />
 
-<iframe style='margin-left:300px; margin-top:100px;' width="560" height="315" src="https://www.youtube.com/embed/g0Hkyo5h4qc" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen></iframe>
+<section class='vitals-p' style='border:dotted; border-radius:30%; height:200px; width:440px;'>
+<h2 style='margin-left:100px;' >When and Why Vitals ? </h2>
+<p style='font-size:15px; position: relative; left: 30px; margin-right:30px;'><b> Vitals are first taken during a primary assessment. <br />
+The primary assessment determines the nature of the primary complaint and rule out,
+prioritize, and treat any immediate life-threatening airway,
+breathing and circulation problems. Vitals are taken and recorded more than once 
+before arriving to the hospital. </p>
+<section>
+
+<div class="pcr">
+<h2 style='margin-left:23rem; margin-top:10rem;'> The Patient Care Report </h2>
+<img style='height:28vh; margin-left:23rem;'src="{% static 'images/vitals.svg' %}" alt="save lives" />
+</div>
+
+
+
 
 {% endblock %}
