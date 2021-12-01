@@ -1,8 +1,7 @@
 .card-container {
-    padding: 0 280px;
+   
     display: flex;
-    justify-content: center;
-    flex-direction: column-reverse;
+    
 
 }
 
@@ -30,7 +29,7 @@
 }
 
 .card-content{
-    position: relative;
+    position:relative;
     bottom: 125px;
     left: 25px;
     color: rgb(57, 57, 59);
