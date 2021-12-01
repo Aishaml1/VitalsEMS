@@ -21,4 +21,5 @@ Vitals are taken for all patients, before arriving to the hospital, EMT's go thr
 
 ## App Preview 
 ![Imgur](/main_app/static/images/main.png)
+![Imgur](/main_app/static/images/pt.png)
 
