@@ -11,7 +11,6 @@ rel="stylesheet"
 src="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.js"
 >
 </script>
-
 <script defer src="{% static 'js/calendar.js' %}"></script>
 
 <link 
@@ -33,9 +32,10 @@ href="{% static 'css/detail.css' %}"
         <p> Phone: {{ patient.phone }} </p>
 </div>
 <div class="patient-actions">
-    <a href="{% url 'patients_update' patient.id %}" class="btn" id='edit'>Edit</a>
-    <a href="{% url 'patients_delete' patient.id %}" class="btn"  id='delete'>Delete</a>
-    </div>
+<a href="{% url 'patients_update' patient.id %}" class="btn" id='edit'>Edit</a>
+<a href="{% url 'patients_delete' patient.id %}" class="btn"  id='delete'>Delete</a>
+</div>
+
 </section>
 <br />
 

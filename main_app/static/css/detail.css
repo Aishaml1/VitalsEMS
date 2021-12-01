@@ -7,25 +7,24 @@ label{
 .add-vitals {
     position: relative;
     left:10rem;
-    top:-16rem;
+    top:-6rem;
     margin:10px;
     color:rgb(0, 0, 0);
     }
 
 h1{
-    margin-bottom:15px;
-
+    margin-bottom:25px;
     }
 section h3 {
     position: relative;
     left: 78rem;
     bottom:30rem;
-    font-size: medium;
+    font-size: large;
 }
 section .table{
     position: relative;
     left: 45rem;
-    bottom: 25rem;
+    bottom: 28rem;
 
 }
 table {
@@ -42,14 +41,13 @@ table, th, td {
     left:10rem;
 }
 
-
 .patient-actions{
     display: flex;
-    flex-direction:column;
+    flex-direction:row;
     gap: 10px;
-    position: relative;
+    position:relative;
     left: 74rem;
-    bottom: 6rem;
+    bottom: 4rem;
 }
 
 
