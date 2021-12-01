@@ -77,6 +77,7 @@ class Vitals(models.Model):
         'Level Of Consciousness',
         max_length=20,
         choices=LOC,
+        default=LOC[0][0]
     )
     gcs = models.IntegerField(
         'Glasgow Coma Scale', 
@@ -86,6 +87,7 @@ class Vitals(models.Model):
         'pupils',
         max_length=20,
         choices=PUPILS,
+        default=PUPILS[0][0]
     )
     skin =  models.CharField( 
         'Skin',

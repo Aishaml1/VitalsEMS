@@ -120,6 +120,7 @@ header {
     float: right;
   }
   nav li {
+
     display: inline-block;
     margin-left:15px;
     height: 70px;

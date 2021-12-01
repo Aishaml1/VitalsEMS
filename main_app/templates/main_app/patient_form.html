@@ -7,12 +7,13 @@
 
 {% block content %}
  {% if object %}
- <h1>{{object.first}} {{object.last}} </h1>
+
+ <h2> Edit {{object.first}} {{object.last}}'s </h2>
+
   {% else %}
 <div class="page-header">
-  <h1>Patient Information</h1>
    {% endif %}
-  <img src="{% static 'images/new.svg' %}" alt="new patient"/>
+   <h1>Patient Information</h1>
 </div>
 
 <form action="" method="post" class="form-container">

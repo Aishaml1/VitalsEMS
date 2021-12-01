@@ -6,30 +6,36 @@ label{
     }
 .add-vitals {
     position: relative;
-    left:20rem;
-    color:green;
-    gap:10px;
+    left:10rem;
+    top:-16rem;
+    margin:10px;
+    color:rgb(0, 0, 0);
     }
 
+h1{
+    margin-bottom:15px;
+
+    }
 section h3 {
     position: relative;
-    left: 43rem;
-    bottom:6rem;
+    left: 78rem;
+    bottom:30rem;
+    font-size: medium;
 }
 section .table{
     position: relative;
-    left: 20rem;
-    bottom:6rem;
+    left: 45rem;
+    bottom: 25rem;
+
 }
 table {
-    width: 50%;
+    width: 60%;
+    font-size: 16px;
 }
 
 table, th, td {
     border: 1px solid black;
 }
-
-
 
 .patient-container{
     position: relative;
@@ -39,13 +45,18 @@ table, th, td {
 
 .patient-actions{
     display: flex;
-    flex-direction:row;
+    flex-direction:column;
     gap: 10px;
+    position: relative;
+    left: 74rem;
+    bottom: 6rem;
 }
+
 
 #delete:before {
     content: 'Delete';
 }
+
 #edit:before {
     content: 'Edit';
 }
@@ -54,16 +65,24 @@ table, th, td {
     content: 'Add';
 }
 
+
 #add{
     position: relative;
-    top:20rem;
+    top:15rem;
 }
 
 
 #status-radio {
 display: inline-block;
-color: green;
+color: rgb(8, 8, 8);
 position: relative;
-right:120rem;
-top: -25px;
+right:118rem;
+top: -15px;
+}
+
+.patient-details {
+    position: relative;
+    top:10px;
+    left: 50rem;
+    font-size: medium;
 }

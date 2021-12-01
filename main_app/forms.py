@@ -7,8 +7,6 @@ class VitalsForm(forms.ModelForm):
                             widget=forms.RadioSelect
                             (attrs={'class':'status',
                                     'id':'status-radio'}))
-    notes=forms.CharField(label=                               
-                    'Notes:')
     class Meta:
         model = Vitals
         fields = [
@@ -21,8 +19,6 @@ class VitalsForm(forms.ModelForm):
             'pupils',
             'skin',
             'consciousness',
-            
-            
+            'status'
         ]
         
-        # notes = forms.CharField(widget=forms.Textarea(attrs={'rows': 3}))
