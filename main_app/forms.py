@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 from django import forms
-from .models import STATUS, Vitals, Patient
+from .models import STATUS, Vitals
 
 class VitalsForm(forms.ModelForm):
     status = forms.ChoiceField(label='Status:', choices=STATUS,

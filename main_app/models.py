@@ -39,7 +39,7 @@ LOC = [
 ]
 
 GENDERS = (
-    (' ', 'Prefer Not to Say'),
+    (' ', 'Unknown'),
     ('M', 'Male'),
     ('F', 'Female'),
     ('X', 'X'),
@@ -61,7 +61,6 @@ class Patient(models.Model):
 
     def __str__(self):
             return self.first
-
 
     def get_absolute_url(self):
         return reverse('patients_detail', kwargs={'patient_id': self.id})

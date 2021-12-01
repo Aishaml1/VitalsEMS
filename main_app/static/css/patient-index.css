@@ -10,7 +10,6 @@
   height:auto;
   margin: 10px;
   border: var(--borders);
-  border-radius: 10%;
   box-shadow: var(--card-box-shadow);
   background: linear-gradient(0.15turn, #ffffff, #736faa, #e61111);
   

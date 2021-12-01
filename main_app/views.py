@@ -30,6 +30,7 @@ def patients_detail(request, patient_id):
     return render(request, 'patients/detail.html', {
     'patient': patient, 'vitals_form': vitals_form,
     })
+
     
 def add_vitals(request, patient_id):
     form = VitalsForm(request.POST)

@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
-html {
-    box-sizing: border-box
-  }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
   
 
   *::before, /* All ::before pseudo-elements */
@@ -131,7 +132,8 @@ header {
     text-decoration: none;
     display: block;
     position: relative;
-    color: #868686;
+    color: #000000;
+    font-size: 15px;
     text-transform: uppercase;
   }
   nav a:after {
@@ -141,7 +143,7 @@ header {
     position: absolute;
     left:0;
     bottom: 15px;
-    background: #868686;
+    background: #0603d6;
     transition: width .5s linear;  
   }
   nav a:hover:after {width: 100%;}
