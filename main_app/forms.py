@@ -1,51 +1,28 @@
 from django.forms import ModelForm
-from .models import Vitals
+from django import forms
+from .models import STATUS, Vitals, Patient
 
-class VitalsForm(ModelForm):
+class VitalsForm(forms.ModelForm):
+    status = forms.ChoiceField(label='Status:', choices=STATUS,
+                            widget=forms.RadioSelect
+                            (attrs={'class':'status',
+                                    'id':'status-radio'}))
+    notes=forms.CharField(label=                               
+                    'Notes:')
     class Meta:
         model = Vitals
         fields = [
-            'vitals_date', 
+            'vitals_date',
             'respiration',
             'pulse',
-            'systolic', 
-            'diastolic', 
-            'consciousness',
-            'gcs', 
+            'systolic',
+            'diastolic',
+            'gcs',
             'pupils',
-            'skin', 
-            'status'
-            ]
-
-
-
-
-
-
-
-
-
-
-# Class Vitals(forms.ModelForm):
-
-# choice = Vitals(label=("Selected your choice"), choices=Vitals.SKIN)
-
-
-# consciousness = forms.ChoiceField(
-#         'Level Of Consciousness',
-#         widget=forms.RadioSelect, choices=LOC
-#         )
-# pupils = forms.ChoiceField(
-#         'Pupils',
-#         widget=forms.RadioSelect, choices=PUPILS
-#         )
-# skin = forms.ChoiceField(
-#         'Skin',
-#         max_length=1,
-#         choices=SKIN,
-#         default=SKIN[0][0]
-#     )
-# status = forms.ChoiceField(
-#         'Status',
-#         widget=forms.RadioSelect, choices=STATUS
-#         )
+            'skin',
+            'consciousness',
+            
+            
+        ]
+        
+        # notes = forms.CharField(widget=forms.Textarea(attrs={'rows': 3}))

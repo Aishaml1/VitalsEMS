@@ -23,14 +23,14 @@ def patients_index(request):
     patients = request.user.patient_set.all()
     return render(request, 'patients/index.html', {'patients': patients})
 
-
+@login_required
 def patients_detail(request, patient_id):
     patient = Patient.objects.get(id=patient_id)
     vitals_form = VitalsForm()
     return render(request, 'patients/detail.html', {
-        'patient': patient, 'vitals_form': vitals_form
+    'patient': patient, 'vitals_form': vitals_form,
     })
-
+    
 def add_vitals(request, patient_id):
     form = VitalsForm(request.POST)
     if form.is_valid():

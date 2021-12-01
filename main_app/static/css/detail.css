@@ -1,38 +1,47 @@
+
+label{
+    font-size:medium;
+    display:inline-block;
+    margin: 8px;
+    }
+.add-vitals {
+    position: relative;
+    left:20rem;
+    color:green;
+    gap:10px;
+    }
+
 section h3 {
     position: relative;
-    left: 59rem;
+    left: 43rem;
     bottom:6rem;
 }
 section .table{
     position: relative;
-    left: 30rem;
+    left: 20rem;
     bottom:6rem;
 }
 table {
     width: 50%;
-  }
+}
 
 table, th, td {
     border: 1px solid black;
 }
 
-.add-vitals {
-    position: relative;
-    left:30rem;
-}
+
 
 .patient-container{
     position: relative;
     left:10rem;
-
 }
+
+
 .patient-actions{
     display: flex;
     flex-direction:row;
     gap: 10px;
 }
-
-
 
 #delete:before {
     content: 'Delete';
@@ -43,4 +52,18 @@ table, th, td {
 
 #add:before {
     content: 'Add';
+}
+
+#add{
+    position: relative;
+    top:20rem;
+}
+
+
+#status-radio {
+display: inline-block;
+color: green;
+position: relative;
+right:120rem;
+top: -25px;
 }

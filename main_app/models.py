@@ -80,7 +80,7 @@ class Vitals(models.Model):
     )
     gcs = models.IntegerField(
         'Glasgow Coma Scale', 
-        default=15
+        default=15,
     )
     pupils = models.CharField( 
         'pupils',
@@ -98,7 +98,6 @@ class Vitals(models.Model):
         max_length=20,
         choices=STATUS,
     )
-    notes = models.TextField(max_length=250)
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
 
     def __str__(self):
