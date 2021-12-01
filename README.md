@@ -12,7 +12,7 @@ The patient Care report can be written on paper or in an electronic device. Usin
  [Click Here](https://vitals-ems.herokuapp.com/patients/)
 
 ## Trello
-Say Hello To [TREllO](https://trello.com/b/how0nPT2/unit-3-project-epcr)
+Say Hello To [TRELLO](https://trello.com/b/how0nPT2/unit-3-project-epcr)
 
 
 ## Vitals in EMS
@@ -22,4 +22,18 @@ Vitals are taken for all patients, before arriving to the hospital, EMT's go thr
 ## App Preview 
 ![Imgur](/main_app/static/images/main.png)
 ![Imgur](/main_app/static/images/pt.png)
+
+
+## Technologies
+* Java Script
+* HTML
+* CSS
+* Django
+* Python
+
+## Future Features
+* light and dark mode
+* mobile feature
+* Search Bar
+
 
