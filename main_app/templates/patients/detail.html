@@ -58,7 +58,7 @@ href="{% static 'css/detail.css' %}"
 <section>
 <h3>Vital Sets</h3>
     <table class="table">
-    <thead>
+    <thead >
         <tr>
             <th>Date</th>
             <th>Respiration</th>
@@ -73,7 +73,7 @@ href="{% static 'css/detail.css' %}"
     </thead>
     <tbody>
      {% for vitals in patient.vitals_set.all %}
-        <tr>
+        <tr id="black" >
             <td>{{vitals.vitals_date}}</td>
             <td>{{vitals.respiration}}</td>
             <td>{{vitals.pulse}}</td>

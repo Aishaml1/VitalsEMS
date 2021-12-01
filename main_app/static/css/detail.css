@@ -27,14 +27,58 @@ section .table{
     bottom: 28rem;
 
 }
-table {
-    width: 60%;
-    font-size: 16px;
+
+
+body{
+  font:1.2em normal Arial,sans-serif;
+  color:#34495E;
 }
 
-table, th, td {
-    border: 1px solid black;
+
+.container{
+  width:90%;
+  margin:auto;
 }
+
+table{
+  border-collapse:collapse;
+  width:50%;
+  font-size: 12px;
+}
+
+thead {
+  border:2px solid #000000;
+  background:#000000;
+}
+
+
+thead{
+    background:#f62c2c50;
+}
+
+thead{
+    color:rgb(0, 0, 0);
+}
+
+th,td{
+  text-align:center;
+  padding:5px 0;
+}
+tbody{
+    border: solid rgb(0, 0, 0);
+}
+tbody tr:nth-child(even){
+    background:#00000000;
+    border: solid rgb(0, 0, 0);
+
+}
+
+tbody tr:hover{
+background:#BDC3C7;
+  color:#000000;
+
+}
+
 
 .patient-container{
     position: relative;
