@@ -1,5 +1,5 @@
 # Vitals EMS 
-https://img.shields.io/static/v1?label=<LABEL>&message=<MESSAGE>&color=<COLOR>
+
 ## Author
  Aisha Lugg
 
@@ -14,6 +14,6 @@ The patient Care report can be written on paper or in an electronic device. Usin
 Vitals are taken for all patients, before arriving to the hospital, EMT's go through a stel called the primary assessment where Vitals are taken. During this step, this is how EMT's know if they have to hurry up and transport the patient.
 
 ## Trello
+Say Hello To [TREllO](https://trello.com/b/how0nPT2/unit-3-project-epcr))
 
-[Go to Real Cool Heading section](#[real-cool-heading](https://trello.com/b/how0nPT2/unit-3-project-epcr))
 
