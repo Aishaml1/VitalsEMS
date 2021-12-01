@@ -20,5 +20,5 @@ Say Hello To [TREllO](https://trello.com/b/how0nPT2/unit-3-project-epcr)
 Vitals are taken for all patients, before arriving to the hospital, EMT's go through a stel called the primary assessment where Vitals are taken. During this step, this is how EMT's know if they have to hurry up and transport the patient.
 
 ## App Preview 
-[Imgur](https://imgur.com/gmvbROx)
+![Imgur](https://imgur.com/gmvbROx)
 
