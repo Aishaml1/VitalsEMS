@@ -2,7 +2,7 @@
 
 html, body {
   max-width: 100%;
-  overflow-x: hidden;
+  
 }
   
 
@@ -81,7 +81,7 @@ header {
   }
   
   .page-header img:first-of-type {
-    margin-left: 20px;
+    margin-left: 2px;
   }
 
 
@@ -91,7 +91,7 @@ header {
     box-shadow: 0 4px 6px rgba(0,0,0,.2);  
   }
 
- .header-logo-container a {
+.header-logo-container a {
     position: absolute;
     left: 0;
     top:15px;
@@ -102,7 +102,7 @@ header {
   }
   .header-logo-container img{
     height:55px;
-    margin-left: 10px;
+    margin-left: 15px;
   }
 
 .header-logo-container {
@@ -111,7 +111,7 @@ header {
   }
 
   nav {
-   margin-right: 15rem;
+  margin-right: 15rem;
   }
 
   ul {

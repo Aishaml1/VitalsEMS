@@ -11,8 +11,7 @@
   margin: 10px;
   border: var(--borders);
   box-shadow: var(--card-box-shadow);
-  background: linear-gradient(0.15turn, #ffffff, #736faa, #e61111);
-  
+  background: linear-gradient(0.15turn, #ffffff, #736faa, #210af0);
 }
 
 .card-content {
